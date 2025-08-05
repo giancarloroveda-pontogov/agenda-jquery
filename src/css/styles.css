@@ -122,6 +122,36 @@ section {
   padding: 8px;
 }
 
+.contatos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-list-button {
+  background-color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 100%;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+
+  transition: all .2s;
+}
+
+.toggle-list-button:hover {
+  background-color: rgb(236, 236, 236);
+  cursor: pointer;
+}
+
+.toggle-list-button:active {
+  background-color: #5D576B;
+}
+
 .contatos-list-container {}
 
 .contatos-list {
@@ -171,4 +201,22 @@ section {
 .destaque {
   background-color: var(--secondary-color);
   color: var(--dark-color);
+}
+
+.searchbar-container {}
+
+.searchbar-input {
+  width: 100%;
+
+  border-radius: 10px;
+  border: 1px solid var(--dark-color);
+  outline: 0;
+
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.searchbar-input:focus {
+  border-color: var(--primary-color);
 }

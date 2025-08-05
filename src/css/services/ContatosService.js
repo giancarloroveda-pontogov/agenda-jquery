@@ -1,5 +1,6 @@
 export default class ContatosService {
   contatos = [];
+  contatosVisiveis = [];
 
   constructor() {
     this.pull();
@@ -9,25 +10,28 @@ export default class ContatosService {
     return [...this.contatos];
   }
 
+  get contatosVisiveis() {
+    return [...this.contatosVisiveis];
+  }
+
   adicionar({ nome }) {
     this.contatos.push({ nome, id: new Date().getTime() })
     this.push();
   }
 
   remover(id) {
-    const index = this.contatos.findIndex((contato) => {
-      console.log(contato.id)
-      console.log(id)
-      return contato.id === id
-    });
-    console.log(index)
+    const index = this.contatos.findIndex((contato) => parseInt(id) === contato.id);
     this.contatos.splice(index, 1);
-    console.log(this.contatos)
     this.push();
+  }
+
+  filter(valor) {
+    this.contatosVisiveis = this.contatos.filter(contato => contato.nome.toLowerCase().includes(valor.toLowerCase()));
   }
 
   pull() {
     this.contatos = JSON.parse(localStorage.getItem("contatos")) || [];
+    this.contatosVisiveis = this.contatos;
   }
 
   push() {
