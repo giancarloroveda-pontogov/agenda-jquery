@@ -1,5 +1,5 @@
 import $ from "jquery";
-import ContatosService from "./css/services/ContatosService";
+import ContatosService from "./services/ContatosService";
 
 const contatosService = new ContatosService();
 
