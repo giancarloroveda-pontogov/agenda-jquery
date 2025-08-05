@@ -15,7 +15,7 @@ $(".form").on("submit", function (event) {
   contatosService.adicionar(formData);
 
   clearForm();
-
+  $("#nome").focus();
   renderContatos();
 });
 
