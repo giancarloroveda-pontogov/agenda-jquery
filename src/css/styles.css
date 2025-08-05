@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #8884FF;
+  --secondary-color: #D7BCE8;
+  --dark-color: #5D576B;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+section {
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page-title {
+  color: var(--primary-color)
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+
+  padding: 8px;
+
+  border: 1px solid var(--dark-color);
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+  margin: 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-input {
+  height: 20px;
+  padding: 4px;
+
+  outline: 0;
+  border: 1px solid var(--dark-color);
+  border-radius: 4px;
+}
+
+.form-label {
+  font-size: 0.8rem;
+}
+
+.form-input:focus {
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 4px;
+  justify-content: end;
+}
+
+.form-save-button {
+  border: 0;
+  border-radius: 4px;
+
+  background-color: var(--primary-color);
+
+  color: white;
+  font-weight: 700;
+
+  padding: 8px;
+}
+
+.form-save-button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+
+.form-clear-button {
+  border: 0;
+  border-radius: 4px;
+
+  background-color: var(--secondary-color);
+
+  color: white;
+  font-weight: 700;
+
+  padding: 8px;
+}
+
+.form-clear-button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+
+.contatos-section {
+  padding: 8px;
+}
+
+.contatos-list-container {}
+
+.contatos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+
+  border: 1px solid var(--dark-color);
+  border-radius: 4px;
+
+  padding: 4px;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
+.remover-contato-button {
+  background-color: white;
+  border: 1px solid rgb(250, 122, 122);
+  border-radius: 4px;
+  font-weight: 700;
+  color: rgb(250, 122, 122);
+  transition: all .2s;
+}
+
+.remover-contato-button:hover {
+  cursor: pointer;
+  background-color: rgb(250, 122, 122);
+  color: white;
+  /* transform: translate(1px, -1px);
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, alpha); */
+}
+
+.remover-contato-button::before {
+  content: "X";
+}
+
+.destaque {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="page-title">Agenda</h1>
+  </header>
+
+  <main class="page-content">
+    <section>
+      <form class="form">
+        <h2 class="form-title">Novo Contato</h2>
+
+        <div class="form-field">
+          <label class="form-label" for="nome">Nome</label>
+          <input class="form-input" id="nome" name="nome" type="text" placeholder="João da Silva...">
+        </div>
+
+        <div class="form-actions">
+          <button class="form-clear-button" type="reset">Limpar</button>
+          <button class="form-save-button" type="submit">Adicionar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="contatos-section">
+      <h2 class="contatos-title">Contatos</h2>
+      <div class="contatos-list-container">
+        <ul class="contatos-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/agenda.js"></script>
+</body>
+
+</html>
